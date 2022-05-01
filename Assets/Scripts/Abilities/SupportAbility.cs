@@ -6,8 +6,20 @@ public class SupportAbility : Abilities
 {
     public override void RandomAbility()
     {
-        int random = 0;
-        switch (random)
+        selectedAbliity = 0; //randomize later
+        switch (selectedAbliity)
+        {
+            case 0:
+                selectedAbliity = 0;
+                abiltiyName = "Heal";
+                abilityDescription = "Doubles current health";
+                break;
+        };
+    }
+
+    public override void RunAbility()
+    {
+        switch (selectedAbliity)
         {
             case 0:
                 heal();
@@ -17,8 +29,6 @@ public class SupportAbility : Abilities
 
     private void heal()
     {
-        abiltiyName = "Heal";
-        abilityDescription = "Doubles current health";
         playerCharacter.health *= 2;
     }
 

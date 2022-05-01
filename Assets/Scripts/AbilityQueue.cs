@@ -28,6 +28,9 @@ public class AbilityQueue : MonoBehaviour
 
             imageQueue[i].overrideSprite = abilityTypes[typeChosen].abilityIcon;
         }
+
+        //Lets player see current ability in UI
+        aQueue.Peek().RandomAbility();
         aName.text = aQueue.Peek().abiltiyName;
         aDescription.text = aQueue.Peek().abilityDescription;
     }
@@ -35,7 +38,7 @@ public class AbilityQueue : MonoBehaviour
     //Activates when player clicks "Accept" button in AbilitySelection UI
     public void UseAbility()
     {
-        aQueue.Dequeue().RandomAbility();
+        aQueue.Dequeue().RunAbility();
         AbilityUsed = true;
     }
 
@@ -60,6 +63,7 @@ public class AbilityQueue : MonoBehaviour
         imageQueue[1].overrideSprite = imageQueue[2].overrideSprite;
         imageQueue[2].overrideSprite = abilityTypes[typeChosen].abilityIcon;
 
+        aQueue.Peek().RandomAbility();
         aName.text = aQueue.Peek().abiltiyName;
         aDescription.text = aQueue.Peek().abilityDescription;
     }

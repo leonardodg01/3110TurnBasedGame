@@ -9,6 +9,8 @@ public class Character : MonoBehaviour
     public string DisplayName;
     public int health;
     public int damage;
+    public MapList map;
+    protected GameObject currentPrefab; //Current prefab that character instantiated
     
     public Character opponent; //Character that this character is fighting
     private int opponentDamage;
@@ -36,4 +38,16 @@ public class Character : MonoBehaviour
 
     //Implemented in child classes, runs when character reaches 0 health
     public virtual void ZeroHP(){}
+
+    //Called by EnemyDefeated event, deletes current prefab so that the next one gets instantiated on its own
+    public void destroyPrefab()
+    {
+        Destroy(currentPrefab);
+    }
+
+    //Makes a function wait for a few seconds when called
+    protected IEnumerator functionWait()
+    {
+        yield return new WaitForSeconds(3f);
+    }
 }
