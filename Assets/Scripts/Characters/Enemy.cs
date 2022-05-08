@@ -14,10 +14,6 @@ public class Enemy : Character
 
     public override void ZeroHP()
     {
-        ResultText.enabled = true;
-        ResultText.text = "YOU WON!";
-
-        StartCoroutine(functionWait());
         enemyDefeated.Invoke();
     }
 
@@ -31,6 +27,7 @@ public class Enemy : Character
 
         //Creates the enemy using values from Enemylist object
         currentPrefab = Instantiate(currentEnemy.enemyPrefab, gameObject.transform.position, Quaternion.Euler(0, -90, 0), gameObject.transform);
+        currentPrefab.transform.localPosition = new Vector3(0, currentEnemy.yPosOffset, 0);
 
         DisplayHP();
     }

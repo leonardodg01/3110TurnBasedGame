@@ -11,8 +11,8 @@ public class SupportAbility : Abilities
         {
             case 0:
                 selectedAbliity = 0;
-                abiltiyName = "Heal";
-                abilityDescription = "Doubles current health";
+                abilityName = "Heal";
+                abilityDescription = "Adds +50 health (Stops at 100)";
                 break;
         };
     }
@@ -29,7 +29,8 @@ public class SupportAbility : Abilities
 
     private void heal()
     {
-        playerCharacter.health *= 2;
+        if (playerCharacter.health < 100)
+            playerCharacter.health += 50;
     }
 
 }

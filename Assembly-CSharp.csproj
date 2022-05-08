@@ -56,10 +56,11 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\MapList.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\WeaponList.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy.cs" />
     <Compile Include="Assets\Scripts\Abilities\SpecialAbility.cs" />
-    <Compile Include="Assets\Scripts\AttackButton.cs" />
+    <Compile Include="Assets\Scripts\UserInterface\AttackButton.cs" />
     <Compile Include="Assets\Scripts\Characters\Character.cs" />
     <Compile Include="Assets\Scripts\Abilities\SupportAbility.cs" />
     <Compile Include="Assets\Scripts\AbilityQueue.cs" />
@@ -68,7 +69,7 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\EnemyList.cs" />
     <Compile Include="Assets\Scripts\TurnSystem.cs" />
     <Compile Include="Assets\Scripts\Abilities\AttackAbility.cs" />
-    <Compile Include="Assets\Scripts\MapList.cs" />
+    <Compile Include="Assets\Scripts\UserInterface\VictoryScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

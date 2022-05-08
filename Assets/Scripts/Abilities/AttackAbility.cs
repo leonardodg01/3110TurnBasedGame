@@ -11,8 +11,8 @@ public class AttackAbility : Abilities
         {
             case 0:
                 selectedAbliity = 0;
-                abiltiyName = "Damage UP";
-                abilityDescription = "Increases damage by 25% for rest of fight";
+                abilityName = "Damage UP";
+                abilityDescription = "Increases damage by 50% for rest of fight";
                 break;
         };
     }
@@ -29,6 +29,6 @@ public class AttackAbility : Abilities
 
     public void increaseDamage() //Increases player damage for rest of fight
     {
-        playerCharacter.damage += playerCharacter.damage / 4;
+        playerCharacter.damage += playerCharacter.damage / 2;
     }
 }

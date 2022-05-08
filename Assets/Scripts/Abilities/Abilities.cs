@@ -9,7 +9,7 @@ public abstract class Abilities : MonoBehaviour
     public Player playerCharacter;
     public Enemy enemyCharacter;
 
-    public string abiltiyName;
+    public string abilityName;
     public string abilityDescription;
 
     protected int selectedAbliity;

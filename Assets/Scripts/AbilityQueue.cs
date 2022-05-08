@@ -21,7 +21,7 @@ public class AbilityQueue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 2; i >= 0; i--) //Places 3 abilities into queue at start
+        for (int i = 0; i <= 2; i++) //Places 3 abilities into queue at start
         {
             int typeChosen = ChooseType();
             aQueue.Enqueue(abilityTypes[typeChosen]);
@@ -31,7 +31,7 @@ public class AbilityQueue : MonoBehaviour
 
         //Lets player see current ability in UI
         aQueue.Peek().RandomAbility();
-        aName.text = aQueue.Peek().abiltiyName;
+        aName.text = aQueue.Peek().abilityName;
         aDescription.text = aQueue.Peek().abilityDescription;
     }
 
@@ -64,7 +64,7 @@ public class AbilityQueue : MonoBehaviour
         imageQueue[2].overrideSprite = abilityTypes[typeChosen].abilityIcon;
 
         aQueue.Peek().RandomAbility();
-        aName.text = aQueue.Peek().abiltiyName;
+        aName.text = aQueue.Peek().abilityName;
         aDescription.text = aQueue.Peek().abilityDescription;
     }
 

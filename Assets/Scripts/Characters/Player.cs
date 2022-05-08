@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : Character
 {
     public WeaponList Weapon;
+    public GameObject hands; //Included so that weapon follows player animation
 
     Player()
     {
@@ -21,20 +22,24 @@ public class Player : Character
 
     public override void ZeroHP()
     {
-        ResultText.enabled = true;
-        ResultText.text = "YOU LOST...";
-        StartCoroutine(functionWait());
-        SceneManager.LoadScene("MainScene");
+        ResultText.gameObject.SetActive(true);
     }
 
     //Gets weapon from current location of mapList
     public void setWeapon(WeaponList newWeapon)
     {
-        Weapon = newWeapon;
-        currentPrefab =  Instantiate(Weapon.weaponPrefab, gameObject.transform.position, Quaternion.Euler(0, 0, -10), gameObject.transform);
+        WeaponList oldWeapon = Weapon;
+        if (newWeapon.baseDamage > oldWeapon.baseDamage || damage == 0) //Only runs if new weapon does more damage
+        {
+            Weapon = newWeapon;
+        }
+        currentPrefab = Instantiate(Weapon.weaponPrefab, hands.transform.position, Quaternion.Euler(0, 0, 0), hands.transform);
         currentPrefab.transform.localScale = new Vector3(Weapon.size, Weapon.size, Weapon.size);
-        currentPrefab.transform.localPosition = new Vector3(0.2f, 1.15f, -0.15f);
+        currentPrefab.transform.localRotation = Quaternion.Euler(70, 180, 10); //Sets correct rotation
 
-        damage = Weapon.baseDamage;
+        if (damage != 0) //Does not run when game starts
+            damage += Weapon.baseDamage - oldWeapon.baseDamage;
+        else
+            damage = Weapon.baseDamage;
     }
 }

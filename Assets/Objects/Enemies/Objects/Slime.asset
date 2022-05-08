@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: Slime
   health: 50
-  damage: 10
+  damage: 15
+  yPosOffset: 0
   enemyPrefab: {fileID: 1457426101113545606, guid: d5c599eba75528245834b11987413b45, type: 3}

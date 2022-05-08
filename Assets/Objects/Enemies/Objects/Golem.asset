@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Golem
   m_EditorClassIdentifier: 
   DisplayName: Golem
-  health: 500
-  damage: 50
+  health: 250
+  damage: 30
+  yPosOffset: -0.55
   enemyPrefab: {fileID: 721391384753264443, guid: 36744da3697b1e94ba01060bd4070ef9, type: 3}

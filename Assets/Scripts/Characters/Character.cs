@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Events;
 using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -10,24 +11,24 @@ public class Character : MonoBehaviour
     public int health;
     public int damage;
     public MapList map;
-    protected GameObject currentPrefab; //Current prefab that character instantiated
+    public GameObject currentPrefab; //Current prefab that character instantiated
     
     public Character opponent; //Character that this character is fighting
     private int opponentDamage;
 
     public TMP_Text characterInfo; //Text that comes up on screen showing DisplayName and health
-    public TMP_Text ResultText; //Text that shows up on screen telling player if they won or lost
+    public Button ResultText; //Text that shows up on screen telling player if they won or lost
 
     //This is called by Attack event
     public void TakeDamage() 
     {
-        opponentDamage = opponent.damage; //Take damage according to opponent damage
-        health -= opponentDamage;
-
-        if (health <= 0)
+        if (health > 0)
         {
-            ZeroHP();
+            opponentDamage = opponent.damage; //Take damage according to opponent damage
+            health -= opponentDamage;
         }
+        if(health <= 0)
+            ZeroHP();
     }
 
     //This is called by Attack event
@@ -37,17 +38,11 @@ public class Character : MonoBehaviour
     }
 
     //Implemented in child classes, runs when character reaches 0 health
-    public virtual void ZeroHP(){}
+    public virtual void ZeroHP() {}
 
     //Called by EnemyDefeated event, deletes current prefab so that the next one gets instantiated on its own
     public void destroyPrefab()
     {
         Destroy(currentPrefab);
-    }
-
-    //Makes a function wait for a few seconds when called
-    protected IEnumerator functionWait()
-    {
-        yield return new WaitForSeconds(3f);
     }
 }
