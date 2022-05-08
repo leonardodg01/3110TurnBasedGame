@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Skeleton
   m_EditorClassIdentifier: 
   DisplayName: Skeleton
-  health: 150
-  damage: 10
+  health: 120
+  damage: 15
   yPosOffset: -0.55
   enemyPrefab: {fileID: 919132149155446097, guid: 1b44462acaa1c2a42851a50d7bd6e5ec, type: 3}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Katana
   m_EditorClassIdentifier: 
   DisplayName: Katana
-  baseDamage: 60
+  baseDamage: 50
   size: 0.3
   weaponPrefab: {fileID: 1056789946713230, guid: 07b815287fdf49c4abf7e2b1b3cee09a, type: 3}

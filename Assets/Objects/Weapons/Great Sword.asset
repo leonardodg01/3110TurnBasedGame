@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Great Sword
   m_EditorClassIdentifier: 
   DisplayName: Great Sword
-  baseDamage: 75
+  baseDamage: 60
   size: 0.5
   weaponPrefab: {fileID: 1206133913752702, guid: c806d7a5f524c164981658a09147feeb, type: 3}

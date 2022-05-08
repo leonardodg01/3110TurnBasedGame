@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Axe
   m_EditorClassIdentifier: 
   DisplayName: Axe
-  baseDamage: 50
+  baseDamage: 35
   size: 0.3
   weaponPrefab: {fileID: 1425575113283610, guid: 71db46cff3144194781d5822a9f1da96, type: 3}

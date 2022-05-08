@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Skeleton Wizard
   m_EditorClassIdentifier: 
   DisplayName: Skeleton Wizard
-  health: 120
-  damage: 30
+  health: 130
+  damage: 40
   yPosOffset: -0.55
   enemyPrefab: {fileID: 241646886338377760, guid: 70b0d7633fc22d1419fe332a014ce87e, type: 3}

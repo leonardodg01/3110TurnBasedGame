@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   DisplayName: Player
-  health: 100
+  health: 200
   damage: 20
   yPosOffset: -0.55
   enemyPrefab: {fileID: 8654250720420973338, guid: 34115fd4eff069845a47d22ce756724e, type: 3}
