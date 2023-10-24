@@ -2,7 +2,9 @@
 
 All C# scripts located under: /Assets/Scripts/
 
-Game .exe is located in build file
+To play game:
+-Enter /Build folder
+-Run 3110TurnBased.exe
 
 To open in Unity:
 -Open in Unity Hub
